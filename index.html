@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Check if your pearOS device may work</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <h1>Check if your pearOS device may work</h1>
+      <p>
+        Search community testing results to see whether your chip, GPU, Wi‑Fi, and other
+        components work on pearOS.
+      </p>
+    </header>
+
+    <main class="container">
+      <section class="panel">
+        <h2>Search tested devices</h2>
+        <label for="search">Device model, chip, or brand</label>
+        <input id="search" type="text" placeholder="Example: PearBook M1, Snapdragon, Intel" />
+        <p id="result-count" class="muted"></p>
+        <div id="results" class="cards"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Submit your own test</h2>
+        <p class="muted">
+          Entries are saved in your browser immediately and shown in the list. To share publicly,
+          copy the generated JSON and open a pull request.
+        </p>
+        <form id="submission-form">
+          <div class="grid">
+            <label>Device Model <input name="deviceModel" required /></label>
+            <label>Chip/CPU <input name="chip" required /></label>
+            <label>GPU <input name="gpu" required /></label>
+            <label>Wi‑Fi <input name="wifi" placeholder="Working / Partial / Not working" required /></label>
+            <label>Bluetooth <input name="bluetooth" placeholder="Working / Partial / Not working" required /></label>
+            <label>Audio <input name="audio" placeholder="Working / Partial / Not working" required /></label>
+            <label>Camera <input name="camera" placeholder="Working / Partial / Not working" required /></label>
+            <label>Overall Status
+              <select name="overallStatus" required>
+                <option value="Works Great">Works Great</option>
+                <option value="Mostly Works">Mostly Works</option>
+                <option value="Needs Fixes">Needs Fixes</option>
+                <option value="Not Working">Not Working</option>
+              </select>
+            </label>
+          </div>
+          <label>Notes
+            <textarea name="notes" rows="3" placeholder="What worked, what didn't, driver notes, etc."></textarea>
+          </label>
+          <button type="submit">Add Local Test Result</button>
+        </form>
+        <pre id="submission-output" class="json-output" hidden></pre>
+      </section>
+    </main>
+
+    <footer>
+      <p>Built for the pearOS community • Hosted automatically with GitHub Actions + Pages.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

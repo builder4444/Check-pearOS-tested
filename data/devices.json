@@ -1,0 +1,28 @@
+[
+  {
+    "deviceModel": "PearBook Air 13 (2023)",
+    "chip": "Pear Silicon P1",
+    "gpu": "PearGPU 8-core",
+    "wifi": "Working",
+    "bluetooth": "Working",
+    "audio": "Working",
+    "camera": "Partial",
+    "overallStatus": "Mostly Works",
+    "notes": "Camera requires community patch v0.3.",
+    "submittedBy": "Alex R.",
+    "testedOn": "2026-03-15"
+  },
+  {
+    "deviceModel": "PearDesk Mini",
+    "chip": "Intel i5-1240P",
+    "gpu": "Intel Iris Xe",
+    "wifi": "Working",
+    "bluetooth": "Working",
+    "audio": "Working",
+    "camera": "Not working",
+    "overallStatus": "Needs Fixes",
+    "notes": "No built-in camera support in current build.",
+    "submittedBy": "Sam",
+    "testedOn": "2026-02-07"
+  }
+]
